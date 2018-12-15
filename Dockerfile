@@ -1,7 +1,7 @@
 FROM alpine:3.8
 LABEL maintainer="github.com/robertbeal"
 
-ARG REVISION=a3ed02c9cbebae392f03e5a1aa56a95de8812b0e
+ARG REVISION=c65ade889132cb7286fe03ccaef5b29c2f13ed21
 ARG ID=3999
 WORKDIR /app
 
