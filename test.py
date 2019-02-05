@@ -15,7 +15,7 @@ def host(request):
 
 def test_system(host):
     assert host.system_info.distribution == 'alpine'
-    assert host.system_info.release == '3.8.1'
+    assert host.system_info.release.startswith('3.9.')
 
 def test_entrypoint(host):
     entrypoint = '/usr/local/bin/entrypoint.sh'
