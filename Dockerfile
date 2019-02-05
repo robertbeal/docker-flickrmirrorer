@@ -1,9 +1,11 @@
-FROM alpine:3.8
+FROM alpine:3.9
 LABEL maintainer="github.com/robertbeal"
 
 ARG REVISION=c65ade889132cb7286fe03ccaef5b29c2f13ed21
 ARG ID=3999
+
 WORKDIR /app
+COPY entrypoint.sh /usr/local/bin
 
 RUN apk add --no-cache \
     git \
@@ -22,12 +24,10 @@ RUN apk add --no-cache \
   && adduser -s /bin/false -D -H -u $ID -G flickr flickr \
   && mkdir /config \
   && chown flickr:flickr /app /config \
-  && chmod 500 /app /config
+  && chmod 500 /app /config \
+  && chmod 555 /usr/local/bin/entrypoint.sh
 
 ENV HOME /config
 VOLUME /config /data
-
-COPY entrypoint.sh /usr/local/bin
-RUN chmod 555 /usr/local/bin/entrypoint.sh
 ENTRYPOINT ["entrypoint.sh"]
 CMD ["--help"]
