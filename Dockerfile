@@ -1,4 +1,4 @@
-FROM alpine:3.9
+FROM alpine:latest
 LABEL maintainer="github.com/robertbeal"
 
 ARG REVISION=c65ade889132cb7286fe03ccaef5b29c2f13ed21
@@ -8,13 +8,13 @@ WORKDIR /app
 COPY entrypoint.sh /usr/local/bin
 
 RUN apk add --no-cache \
-    git \
-    python3 \
-    su-exec \
+  git \
+  python3 \
+  su-exec \
   && python3 -m pip --no-cache-dir install --upgrade \
-    pip \
-    flickrapi==2.4.0 \
-    python-dateutil \
+  pip \
+  flickrapi==2.4.0 \
+  python-dateutil \
   && git clone https://github.com/markdoliner/flickrmirrorer.git \
   && cd flickrmirrorer \
   && git checkout $REVISION \

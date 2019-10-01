@@ -1,14 +1,15 @@
 services: docker
 language: python
 python:
-  - '3.6'
+  - "3.6"
 
 env:
   matrix:
     - ARCH=i386
     - ARCH=amd64
     - ARCH=arm
-    - ARCH=arm64
+    - ARCH=armv7
+    - ARCH=aarch64
 
 install:
   - pip install -r requirements-test.txt
@@ -17,7 +18,7 @@ before_script:
   - ./build.sh $ARCH
   - docker run --rm --privileged multiarch/qemu-user-static:register --reset
 
-script:  
+script:
   - pytest -v test.py
   - docker build -t robertbeal/flickr:$ARCH -t robertbeal/flickr:$ARCH.$VERSION --file Dockerfile.$ARCH .
 
