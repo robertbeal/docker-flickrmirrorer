@@ -60,7 +60,7 @@ def test_config_folder(host):
     assert host.file(folder).exists
     assert host.file(folder).user == "flickr"
     assert host.file(folder).group == "flickr"
-    assert oct(host.file(folder).mode) == "0o500"
+    assert oct(host.file(folder).mode) == "0o700"
 
 
 @pytest.mark.parametrize("package", [("python3"), ("su-exec")])
