@@ -24,7 +24,8 @@ RUN apk add --no-cache \
   && adduser -s /bin/false -D -H -u $ID -G flickr flickr \
   && mkdir /config \
   && chown flickr:flickr /app /config \
-  && chmod 500 /app /config \
+  && chmod 500 /app \
+  && chmod 700 /config \
   && chmod 555 /usr/local/bin/entrypoint.sh
 
 ENV HOME /config
