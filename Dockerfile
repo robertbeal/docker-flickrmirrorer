@@ -10,6 +10,7 @@ COPY entrypoint.sh /usr/local/bin
 RUN apk add --no-cache \
   git \
   python3 \
+  py3-pip \
   su-exec \
   && python3 -m pip --no-cache-dir install --upgrade \
   pip \
