@@ -28,4 +28,4 @@ deploy:
     echo "$DOCKER_PWD" | docker login -u "$DOCKER_USER" --password-stdin &&
     docker push robertbeal/flickr:$ARCH;
   on:
-    branch: master
+    branch: main
