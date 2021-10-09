@@ -1,7 +1,7 @@
 FROM alpine:latest
 LABEL maintainer="github.com/robertbeal"
 
-ARG REVISION=c65ade889132cb7286fe03ccaef5b29c2f13ed21
+ARG COMMIT_ID=c65ade889132cb7286fe03ccaef5b29c2f13ed21
 ARG ID=3999
 
 WORKDIR /app
@@ -18,7 +18,7 @@ RUN apk add --no-cache \
   python-dateutil \
   && git clone https://github.com/markdoliner/flickrmirrorer.git \
   && cd flickrmirrorer \
-  && git checkout $REVISION \
+  && git checkout $COMMIT_ID \
   && apk del --purge git \
   && rm -rf /tmp/* \
   && addgroup -g $ID flickr \
