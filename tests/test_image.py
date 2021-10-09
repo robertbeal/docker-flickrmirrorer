@@ -6,8 +6,11 @@ import testinfra
 
 @pytest.fixture(scope="session")
 def host(request):
-    subprocess.check_call(["docker", "build", "-t", "image-under-test", "."])
-    docker_id = (
+    # set the working directory to where the Dockerfile lives
+    path = os.path.dirname(os.path.abspath(__file__)) + "/../"
+
+    subprocess.check_call(["docker", "build", "-t", "image-under-test", "."], cwd=path)
+    container_id = (
         subprocess.check_output(
             [
                 "docker",
@@ -17,16 +20,15 @@ def host(request):
                 "--entrypoint=/usr/bin/tail",
                 "-t",
                 "image-under-test",
-            ]
+            ], cwd=path
         )
         .decode()
         .strip()
     )
 
-    yield testinfra.get_host("docker://" + docker_id)
+    yield testinfra.get_host("docker://" + container_id)
 
-    # teardown
-    subprocess.check_call(["docker", "rm", "-f", docker_id])
+    subprocess.check_call(["docker", "rm", "-f", container_id])
 
 
 def test_system(host):
