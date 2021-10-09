@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: brpaz/hadolint-action@master
         with:
-          ignore: DL3059 DL3018
+          ignore: DL3059 DL3018 DL3007 DL3003
 
   test:
     runs-on: ubuntu-latest
