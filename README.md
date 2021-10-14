@@ -8,5 +8,5 @@ docker run \
     --user $(id -u):$(id -g) \
     --volume /home/me/.flickr:/config/.flickr \
     --volume /home/me/photos:/data \
-    robertbeal/flickr --verbose --statistics
+    robertbeal/flickrmirrorer --verbose --statistics
 ```
