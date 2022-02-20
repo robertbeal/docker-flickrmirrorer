@@ -1,4 +1,11 @@
-# docker-flickrmirrorer
+[![Actions Status](https://github.com/robertbeal/docker-flickrmirrorer/workflows/build/badge.svg)](https://github.com/robertbeal/docker-flickrmirrorer/actions)
+[![](https://images.microbadger.com/badges/image/robertbeal/flickrmirrorer.svg)](https://microbadger.com/images/robertbeal/flickrmirrorer "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/robertbeal/flickrmirrorer.svg)](https://microbadger.com/images/robertbeal/flickrmirrorer "Get your own version badge on microbadger.com")
+[![](https://img.shields.io/docker/pulls/robertbeal/flickrmirrorer.svg)](https://hub.docker.com/r/robertbeal/flickrmirrorer/)
+[![](https://img.shields.io/docker/stars/robertbeal/flickrmirrorer.svg)](https://hub.docker.com/r/robertbeal/flickrmirrorer/)
+[![](https://img.shields.io/docker/automated/robertbeal/flickrmirrorer.svg)](https://hub.docker.com/r/robertbeal/flickrmirrorer/)
+
+# flickrmirrorer
 
 A container built version of [flickrmirrorer](https://github.com/markdoliner/flickrmirrorer) that I use for backing up my flickr account photos.
 
