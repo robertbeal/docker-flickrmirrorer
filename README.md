@@ -3,7 +3,6 @@
 [![](https://images.microbadger.com/badges/version/robertbeal/flickrmirrorer.svg)](https://microbadger.com/images/robertbeal/flickrmirrorer "Get your own version badge on microbadger.com")
 [![](https://img.shields.io/docker/pulls/robertbeal/flickrmirrorer.svg)](https://hub.docker.com/r/robertbeal/flickrmirrorer/)
 [![](https://img.shields.io/docker/stars/robertbeal/flickrmirrorer.svg)](https://hub.docker.com/r/robertbeal/flickrmirrorer/)
-[![](https://img.shields.io/docker/automated/robertbeal/flickrmirrorer.svg)](https://hub.docker.com/r/robertbeal/flickrmirrorer/)
 
 # flickrmirrorer
 
