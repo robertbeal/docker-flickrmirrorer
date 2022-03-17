@@ -1,4 +1,4 @@
-FROM alpine:3.15.0
+FROM alpine:3.15.1
 LABEL maintainer="github.com/robertbeal"
 
 ARG COMMIT_ID=c65ade889132cb7286fe03ccaef5b29c2f13ed21
