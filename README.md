@@ -42,3 +42,4 @@ docker run \
     --volume /mnt/photos:/data \
     robertbeal/flickrmirrorer --verbose --statistics
 ```
+Upon first run it'll ask you to authenticate.
