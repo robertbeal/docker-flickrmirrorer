@@ -65,6 +65,9 @@ def test_config_folder(host):
     assert oct(host.file(folder).mode) == "0o700"
 
 
-@pytest.mark.parametrize("package", [("python3"), ("su-exec")])
-def test_installed_dependencies(host, package):
-    assert host.package(package).is_installed
+def test_installed_dependencies(host):
+    assert host.package('su-exec').is_installed
+
+
+def test_python_installed(host):
+    assert host.run("python3 --version").rc == 0
