@@ -12,7 +12,7 @@ RUN git clone https://github.com/robertbeal/flickrmirrorer.git
 RUN python3 -m venv /app/venv \
   && . /app/venv/bin/activate \
   && pip install --no-cache-dir --upgrade pip \
-  && pip install --no-cache-dir flickrapi==2.4.0 python-dateutil=2.9.0
+  && pip install --no-cache-dir flickrapi==2.4.0 python-dateutil==2.9.0
 
 FROM python:3.10-alpine
 LABEL maintainer="github.com/robertbeal"
