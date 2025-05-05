@@ -7,7 +7,7 @@ RUN apk add --no-cache \
 
 WORKDIR /app
 
-RUN git clone https://github.com/markdoliner/flickrmirrorer.git
+RUN git clone https://github.com/robertbeal/flickrmirrorer.git
 
 RUN python3 -m venv /app/venv \
   && . /app/venv/bin/activate \
